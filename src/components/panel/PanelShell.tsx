@@ -81,7 +81,7 @@ export default function PanelShell({ children }: { children: ReactNode }) {
 
   let body: ReactNode;
   if (!configured) {
-    body = <p className="mt-10 rounded-2xl border border-border bg-surface p-6">Supabase henüz bağlanmadı. .env.local dosyasını doldurun.</p>;
+    body = <p className="mt-10 rounded-2xl border border-border bg-surface p-6">Panel henüz yapılandırılmadı.</p>;
   } else if (session === undefined) {
     body = <p className="mt-10 text-center text-muted">Yükleniyor...</p>;
   } else if (!session) {
