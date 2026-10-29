@@ -1,5 +1,11 @@
 [build]
   command = "npm run build"
+  # output: "export" kullanılmıyor (sunucu tarafı özellikler var), bu yüzden publish dizini .next
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Next.js (App Router, ISR, next/image) için resmî Netlify eklentisi
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
